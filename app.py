@@ -298,6 +298,40 @@ div[data-testid="stExpander"] div[role="region"] * {
         border-radius: 18px;
         border: 1px solid #ffdfba;
     }
+    /* FIX EXPANDER AGAR TIDAK HITAM SAAT DARK MODE */
+
+div[data-testid="stExpander"] {
+    background: rgba(255,255,255,0.95) !important;
+    border: 2px solid #ffdfba !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+}
+
+div[data-testid="stExpander"] details {
+    background: rgba(255,255,255,0.95) !important;
+}
+
+div[data-testid="stExpander"] summary {
+    background: linear-gradient(90deg,#fff7e6,#ffeef2) !important;
+    color: #1e293b !important;
+    font-weight: 700 !important;
+    border-radius: 18px !important;
+}
+
+div[data-testid="stExpander"] summary p {
+    color: #1e293b !important;
+}
+
+div[data-testid="stExpanderDetails"] {
+    background: rgba(255,255,255,0.95) !important;
+}
+
+div[data-testid="stExpanderDetails"] p,
+div[data-testid="stExpanderDetails"] span,
+div[data-testid="stExpanderDetails"] div {
+    color: #1e293b !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -312,6 +346,7 @@ st.markdown("""
 # Mengubah expander menjadi transparan/default agar responsif penuh terhadap Light & Dark Mode
 with st.expander("✨ Halo Kapten! (Klik untuk melihat panduan misi kelompok)", expanded=False):
     st.markdown("""
+                
     <b>Sistem ini membagi kelompok secara otomatis menggunakan pendekatan kecerdasan buatan:</b><br><br>
     &nbsp;&nbsp;1. <b>Orbit K-Means:</b> Memetakan dan membagi mahasiswa ke dalam cluster performa akademik (Strata Tinggi, Sedang, Kurang).<br>
     &nbsp;&nbsp;2. <b>Warp Drive Round-Robin:</b> Mendistribusikan mahasiswa dari tiap orbit cluster ke kelompok tujuan secara bergiliran.<br><br>
