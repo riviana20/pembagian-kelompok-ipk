@@ -298,6 +298,31 @@ div[data-testid="stExpander"] div[role="region"] * {
         border-radius: 18px;
         border: 1px solid #ffdfba;
     }
+    /* PAKSA HEADER STREAMLIT MENJADI TERANG */
+
+header[data-testid="stHeader"] {
+    background: rgba(255,255,255,0.95) !important;
+    backdrop-filter: blur(8px) !important;
+    border-bottom: 1px solid #ffdfba !important;
+}
+
+/* Toolbar kanan atas */
+[data-testid="stToolbar"] {
+    background: transparent !important;
+}
+
+/* Ikon dan tombol di header */
+header[data-testid="stHeader"] button,
+header[data-testid="stHeader"] svg,
+header[data-testid="stHeader"] a {
+    color: #1e293b !important;
+    fill: #1e293b !important;
+}
+
+/* Area pojok kanan atas */
+[data-testid="stDecoration"] {
+    background: transparent !important;
+}
     /* FIX EXPANDER AGAR TIDAK HITAM SAAT DARK MODE */
 
 div[data-testid="stExpander"] {
